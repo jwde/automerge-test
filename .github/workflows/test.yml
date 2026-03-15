@@ -1,7 +1,9 @@
-name: Call External Reusable
+name: Test
 on:
+  workflow_call:
   workflow_dispatch:
 jobs:
-  call-external:
-    uses: jwde2/reusable-workflow-test/.github/workflows/reusable.yml@main
-    secrets: inherit
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
